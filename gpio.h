@@ -10,6 +10,10 @@
 
 #include "MKL25Z4.h"
 
+#ifndef PORT_PCR_PE(x)
+#define PORT_PCR_PE(x) (((uint32_t)(((uint32_t)(x))<<PORT_PCR_PE_SHIFT))&PORT_PCR_PE_MASK)
+#endif
+
 #ifndef bool
 typedef unsigned char bool;
 #endif
